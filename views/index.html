@@ -1,0 +1,42 @@
+<html>
+<head>
+  <!-- <meta http-equiv="refresh" content="1;url=https://www.facebook.com/lojaelixir"> -->
+  <meta content="https://gif-elixir.herokuapp.com/gifs/<%= gif %>.gif" property="og:url" >
+  <meta content="Elixir - Produtos artesanais para barba!" property="og:title" >
+  <meta content="https://gif-elixir.herokuapp.com/gifs/<%= gif %>.gif" property="og:image" >
+  <meta content="video.other" property="og:type" >
+  <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+  <title>Elixir</title>
+</head>
+<body>
+  <img src="gifs/<%= gif %>.gif">
+  <script>
+  $(document).ready(function() {
+    $.post(
+      'https://graph.facebook.com',
+      {
+        id: "https://gif-elixir.herokuapp.com/gifs",
+        scrape: true
+      },
+      function(response){
+        console.log(response);
+      }
+    );
+    setInterval(function(){
+      // setTimeout(function(){
+      $.post(
+        'https://graph.facebook.com',
+        {
+          id: "https://gif-elixir.herokuapp.com/gifs",
+          scrape: true
+        },
+        function(response){
+          console.log(response);
+        }
+      );
+    },5000);
+  });
+  </script>
+
+</body>
+</html>
