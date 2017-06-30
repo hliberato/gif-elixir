@@ -8,7 +8,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 
 app.get('/', function(req, res){
-  var random = Math.floor((Math.random() * 5) + 1);
+  var random = Math.floor((Math.random() * 13) + 1);
   res.render('index', {
     gif: random+""
   });
