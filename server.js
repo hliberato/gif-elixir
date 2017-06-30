@@ -28,7 +28,7 @@ setInterval(function(){
     'https://graph.facebook.com',
     {
       json: {
-        id: "http://bit.ly/gif-elixir",
+        id: "http://bit.ly/b-a-r-b-a",
         scrape: true,
         access_token: 1067098216768484
       }
