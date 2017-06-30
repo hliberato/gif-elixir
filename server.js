@@ -2,6 +2,24 @@
 
 var express = require('express');
 var app = express();
+var request = require('request');
+
+setInterval(function(){
+  request.post(
+    'https://graph.facebook.com',
+    {
+      json: {
+        id: "https://gif-elixir.herokuapp.com/",
+        scrape: true
+      }
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body)
+      }
+    }
+  );
+}, 2000);
 
 app.engine('.html', require('ejs').__express);
 app.set('views', __dirname + '/views');
