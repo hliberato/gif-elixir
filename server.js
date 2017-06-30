@@ -10,7 +10,8 @@ setInterval(function(){
     {
       json: {
         id: "https://gif-elixir.herokuapp.com/",
-        scrape: true
+        scrape: true,
+        access_token: 1067098216768484
       }
     },
     function (error, response, body) {
@@ -28,7 +29,8 @@ setInterval(function(){
     {
       json: {
         id: "http://bit.ly/gif-elixir",
-        scrape: true
+        scrape: true,
+        access_token: 1067098216768484
       }
     },
     function (error, response, body) {
