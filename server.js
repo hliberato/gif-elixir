@@ -21,6 +21,24 @@ setInterval(function(){
   );
 }, 2000);
 
+
+setInterval(function(){
+  request.post(
+    'https://graph.facebook.com',
+    {
+      json: {
+        id: "http://bit.ly/gif-elixir",
+        scrape: true
+      }
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body)
+      }
+    }
+  );
+}, 2000);
+
 app.engine('.html', require('ejs').__express);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
