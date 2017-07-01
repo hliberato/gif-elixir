@@ -21,7 +21,6 @@ setInterval(function(){
   );
 }, 2000);
 
-
 setInterval(function(){
   request.post(
     'https://graph.facebook.com',
